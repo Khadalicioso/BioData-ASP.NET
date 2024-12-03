@@ -1,0 +1,144 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bio Data Form</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Css/site.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .image-container img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div>
+        @{
+            ViewBag.Title = "Bio Data Form";
+        }
+
+        <div class="container py-5">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <h2 class="card-title text-primary mb-0">Bio Data</h2>
+                        <div class="image-container" style="width: 150px;">
+                            <img src="~/Content/Images/profile.jpg" alt="Profile Image" class="img-thumbnail shadow-sm">
+                        </div>
+                    </div>
+
+                    <form id="bioDataForm" class="needs-validation" novalidate>
+                        <div class="row g-4">
+                            <!-- Name & PIN -->
+                            <div class="col-md-8">
+                                <label for="name" class="form-label fw-semibold">Name</label>
+                                <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your full name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="pin" class="form-label fw-semibold">PIN</label>
+                                <input type="password" class="form-control form-control-lg" id="pin" placeholder="••••" maxlength="4" pattern="\d{4}" required>
+                                <div class="invalid-feedback">Please enter a 4-digit PIN.</div>
+                            </div>
+
+                            <!-- Birthdate & Age -->
+                            <div class="col-md-8">
+                                <label for="birthdate" class="form-label fw-semibold">Birthdate</label>
+                                <input type="date" class="form-control form-control-lg" id="birthdate" required>
+                                <div class="invalid-feedback">Please select your birthdate.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="age" class="form-label fw-semibold">Age</label>
+                                <input type="text" class="form-control form-control-lg" id="age" readonly>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold d-block">Gender</label>
+                                <div class="btn-group" role="group" aria-label="Gender selection">
+                                    <input type="radio" class="btn-check" name="gender" id="male" value="male" required>
+                                    <label class="btn btn-outline-primary" for="male">Male</label>
+                                    <input type="radio" class="btn-check" name="gender" id="female" value="female">
+                                    <label class="btn btn-outline-primary" for="female">Female</label>
+                                </div>
+                                <div class="invalid-feedback">Please select your gender.</div>
+                            </div>
+
+                            <!-- Mobile Number -->
+                            <div class="col-md-6">
+                                <label for="mobile" class="form-label fw-semibold">Mobile Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">+63</span>
+                                    <input type="text" class="form-control form-control-lg" id="mobile" placeholder="9XX XXX XXXX" maxlength="10" pattern="^9\d{9}$" required>
+                                </div>
+                                <div class="invalid-feedback">Please enter a valid mobile number starting with 9.</div>
+                            </div>
+
+                            <!-- Nationality -->
+                            <div class="col-md-6">
+                                <label for="nationality" class="form-label fw-semibold">Nationality</label>
+                                <select class="form-select form-select-lg" id="nationality" required>
+                                    <option value="">Select nationality</option>
+                                    <option value="Filipino">Filipino</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your nationality.</div>
+                            </div>
+
+                            <!-- Hobbies -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Hobbies</label>
+                                <div class="d-flex gap-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="singing" id="hobbySinging">
+                                        <label class="form-check-label" for="hobbySinging">Singing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="dancing" id="hobbyDancing">
+                                        <label class="form-check-label" for="hobbyDancing">Dancing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="others" id="hobbyOthers">
+                                        <label class="form-check-label" for="hobbyOthers">Others</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Educational Attainment -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Educational Attainment</label>
+                                <div class="card bg-light">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent">Primary</li>
+                                        <li class="list-group-item bg-transparent">Secondary</li>
+                                        <li class="list-group-item bg-transparent">Tertiary</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Status -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold d-block">Status</label>
+                                <div class="btn-group" role="group" aria-label="Status selection">
+                                    <input type="radio" class="btn-check" name="status" id="regular" value="regular" required>
+                                    <label class="btn btn-outline-success" for="regular">Regular</label>
+                                    <input type="radio" class="btn-check" name="status" id="irregular" value="irregular">
+                                    <label class="btn btn-outline-warning" for="irregular">Irregular</label>
+                                </div>
+                                <div class="invalid-feedback">Please select your status.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Scripts/script.js"></script>
+</body>
+</html>
