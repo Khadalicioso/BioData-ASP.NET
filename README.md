@@ -1,4 +1,4 @@
-# Bio Data Form
+# Bio Data
 
 A modern and professional ASP.NET MVC web application for collecting and managing biographical information. The application features a sleek, responsive design built with Bootstrap 5, offering an intuitive user experience across all devices.
 
@@ -44,10 +44,10 @@ A modern and professional ASP.NET MVC web application for collecting and managin
 2. Setup Steps:
    ```bash
    # Clone the repository
-   git clone https://github.com/Khadalicioso/biodata.git
+   git clone https://github.com/Khadalicioso/biodata-aspdotnet.git
 
    # Navigate to project directory
-   cd biodata
+   cd biodata-aspdotnet
 
    # Open the solution file
    start biodata.sln
@@ -113,7 +113,7 @@ This project was developed as part of a school activity to demonstrate understan
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
-Copyright (c) 2024 Khadalicioso
+Copyright (c) 2024 Miguel Enrique Dasalla
 
 ---
 
