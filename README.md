@@ -34,49 +34,6 @@ A modern and professional ASP.NET MVC web application for collecting and managin
 - Educational attainment display
 - Status selection (Regular/Irregular)
 
-## Installation
-
-1. Prerequisites:
-   - Visual Studio 2019 or later
-   - .NET Framework 4.5+
-   - Web browser with JavaScript enabled
-
-2. Setup Steps:
-   ```bash
-   # Clone the repository
-   git clone https://github.com/Khadalicioso/biodata-aspdotnet.git
-
-   # Navigate to project directory
-   cd biodata-aspdotnet
-
-   # Open the solution file
-   start biodata.sln
-   ```
-
-3. Build and Run:
-   - Open the solution in Visual Studio
-   - Restore NuGet packages
-   - Build the solution (Ctrl + Shift + B)
-   - Press F5 to run the application
-
-## Project Structure
-
-```
-biodata/
-├── App_Start/                 # Application startup configuration
-├── Content/                   # Static files (CSS, Images)
-│   ├── Css/                  # Custom CSS files
-│   ├── Images/               # Image assets
-│   └── Scripts/              # JavaScript files
-├── Controllers/              # MVC Controllers
-├── Models/                   # Data models
-├── Views/                    # MVC Views
-│   ├── Home/                 # Home controller views
-│   └── Shared/              # Shared layouts and partials
-├── App_Data/                 # Application data files
-└── Scripts/                  # Third-party scripts
-```
-
 ## Academic Context
 
 This project was developed as part of a school activity to demonstrate understanding of:
@@ -85,13 +42,6 @@ This project was developed as part of a school activity to demonstrate understan
 - Web Development Principles
 - Data Management
 - User Interface Design
-
-## Getting Started
-
-1. Clone the repository
-2. Open the solution in Visual Studio
-3. Build and run the project
-4. Access the form through your web browser
 
 ## Design Features
 
@@ -113,8 +63,3 @@ This project was developed as part of a school activity to demonstrate understan
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
-Copyright (c) 2024 Miguel Enrique Dasalla
-
----
-
-Made with ❤️ for learning and development
